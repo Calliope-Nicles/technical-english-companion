@@ -1,3 +1,9 @@
 - insert:
     - id: technical-english-companion
       name: ./src/dsh/index.mjs
+    - id: technical-english-companion-responses
+      name: ./src/dsh/adapter.mjs
+      disabled: true
+      config:
+        baseURL: https://api.deepseek.com
+        apiKeyEnv: DEEPSEEK_API_KEY

@@ -1,7 +1,7 @@
 {
   "name": "dsh-plugin-technical-english-companion",
-  "version": "2.0.2",
-  "description": "专业英语术语伴学 / Technical English Companion. Learn software development terms in English while working in Chinese.",
+  "version": "3.0.0",
+  "description": "专业英语术语伴学 / Technical English Companion. Learn software development terms in English while working in Chinese, Spanish, Japanese, or Korean.",
   "type": "module",
   "main": "src/dsh/index.mjs",
   "private": true,
@@ -11,12 +11,19 @@
     "darwin"
   ],
   "engines": {
-    "dsh": "0.2.1-rc.3 || 0.2.2-rc.1"
+    "dsh": "0.2.2-rc.1"
   },
   "files": [
     "cordis.patch.yml",
+    "cordis.responses.patch.yml",
     "src/dsh/index.mjs",
-    "src/terminology.md"
+    "src/dsh/output.mjs",
+    "src/dsh/adapter.mjs",
+    "src/dsh/structured.mjs",
+    "src/terminology.md",
+    "docs/guide-es.md",
+    "docs/guide-ja.md",
+    "docs/guide-ko.md"
   ],
   "dsh": {
     "bundle": {

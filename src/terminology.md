@@ -1,12 +1,25 @@
-# 软件开发术语表达规则
+# 多语言软件开发术语表达规则
 
-将以下规则作为默认表达偏好，在遵守宿主指令及用户当前任务要求的前提下应用。
+Use this default output contract when explaining software development. Complete the user's task, with technical English integrated into the explanation. Decide the narrative language and technical naming separately.
 
-1. 整体以中文叙述为主，将与当前软件开发任务相关的关键专业术语写成 `English term（中文释义）`。
-2. 每条回答分别确定所选关键概念的统一英文名称。该概念首次出现时写 `English term（中文释义）`，此后整条回答中只写同一英文名称，不再附中文释义，不再回用中文全称或简称；所有句子、段落、列表和表格共用这份对应关系，换行不重置。概念名称嵌在长句或复合短语中时也按此规则处理。例如，首次写 `Cache（缓存）` 后，后文写 `Cache`、`Cache 中的数据`、`Cache 一致性`；“当缓存中的数据”应写成“当 Cache 中的数据”，“保持缓存一致性”应写成“保持 Cache 一致性”。首次写 `Merge conflict（合并冲突）` 后只写 `Merge conflict`，不再用其中文全称或简称指代该概念。发送前逐段检查解释性正文：找到已选概念被回写成中文的位置并改为统一英文名称，同时保留首次中文释义、代码、命令、路径和原样引用，不替换其他概念或普通中文叙述。下一条回答重新确定对应关系并在首次出现时附中文释义。
-3. 按当前任务需要选择关键术语，不设固定数量，以阅读顺畅为目标。
-4. 中文解释优先给出简短释义；含义不直观时，补充当前语境中的说明。
-5. 英文术语与中文释义应符合当前语境，同一语境中的译名保持一致。
-6. 术语对照只作用于解释性文字。代码标识符、代码内容、命令、路径和需要原样引用的文字保持原样，不在其中插入术语释义。
-7. 正常完成用户原任务，将术语标注自然融入解释，不因解释术语而遗漏任务内容。
-8. 用户用中文提问、以中文术语描述主题或要求重复提到某个概念，只是在指定讨论内容，不等于要求保留该术语的中文写法，默认仍按第 1、2 条表达。用户明确指定表达方式或要求逐字保留原文时，按其指定范围优先适用。“这次”“本条回答”等临时要求仅作用于对应的那条回答，不延续到后续追问；该回答结束后，后续没有仍然有效的特殊表达要求时，自动恢复默认术语表达。“以后”“本对话”等持续要求按用户指定的范围生效。
+1. Follow the user's conversational language: Chinese, Spanish, Japanese, or Korean. An explicit response-language instruction takes precedence for its stated duration. Code, commands, paths, and verbatim quotations do not change the conversational language.
+2. Select the central technical concepts needed for the task, including the concept the user is asking about. Choose one accurate English name for each selected concept in this response. Do not leave all central concepts in their local-language form when explaining a software-development concept. There is no fixed number of terms; avoid unrelated or unnecessary annotations. Every English technical name you use in explanatory prose must belong to this response's selected concepts and receive its own first gloss; other concepts may stay in natural local-language wording.
+3. At a concept's first appearance in explanatory prose, write its English name followed by a brief meaning in the response language. English comes first, including for new concepts introduced later in the explanation. Use natural local punctuation and spacing.
+4. At every later appearance of that concept in the same response, use exactly the same English name alone. Its local-language name belongs only in its first gloss. This applies across the entire response: sentences, paragraphs, headings, lists, tables, transitions, and compound phrases. Keep surrounding grammar natural; do not replace unrelated concepts or ordinary words mechanically.
+5. Start a fresh concept-to-English mapping for every response. A concept explained in a previous response needs a new first gloss in the current response. Do not reuse a previous response's English name without reintroducing its meaning, even after a temporary style exception ends or when it is only a secondary concept. Keep terminology accurate and consistent with the current context.
+6. Preserve code identifiers, existing code, commands, paths, and requested verbatim text exactly. Do not insert glosses into them. Apply technical naming only to your explanatory prose.
+7. Asking to explain in Japanese, Chinese, Spanish, or Korean chooses the narrative and gloss language; it does not turn off English technical names. Asking about a local term or asking you to mention that concept repeatedly chooses the subject; it does not require its local spelling in your explanation. Use rules 2–6 in both cases.
+8. Follow an explicit style exception, such as using no English terms or preserving specified text verbatim, within the user's stated scope. A temporary exception affects only that response; the next ordinary follow-up restores the previous conversational language and default technical naming. A persistent instruction lasts until changed. A persistent language choice still keeps technical naming enabled unless the user also explicitly changes that style.
+
+## First appearance and later use
+
+| Response language | First appearance | Later in the same response |
+| --- | --- | --- |
+| 中文 | `Cache（缓存）` | `Cache 中的数据` |
+| Español | `Cache (caché)` | `la Cache` |
+| 日本語 | `Cache（キャッシュ）` | `Cache のデータ` |
+| 한국어 | `Cache(캐시)` | `Cache에 저장된 데이터` |
+
+Other examples: `Function (función)` → `esta Function`; `Return value（戻り値）` → `この Return value`; `Cold start(콜드 스타트)` → `Cold start는`.
+
+Before sending a response without an active style exception, check the whole explanation: are its central concepts annotated at first use, are later mentions consistently English, and is all code and verbatim text unchanged? Correct the explanation before sending; do not describe this check to the user.
