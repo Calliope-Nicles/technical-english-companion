@@ -6,6 +6,10 @@ Esta extensión ayuda a aprender vocabulario de desarrollo de software mientras 
 
 Si vienes del identificador anterior `technical-terms-en-zh` o `dsh-plugin-technical-terms-en-zh`, desactívalo antes de activar `technical-english-companion` o `dsh-plugin-technical-english-companion`. Mantén una sola copia habilitada. Puedes conservar tu instalación habitual y seguir el procedimiento siguiente en un entorno independiente.
 
+## Descargas
+
+[Versión v3.0.0](https://github.com/Calliope-Nicles/technical-english-companion/releases/tag/v3.0.0) · [Paquete para Codex (.zip)](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.0/technical-english-companion-3.0.0.zip) · [Paquete para DSH (.tgz)](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.0/dsh-plugin-technical-english-companion-3.0.0.tgz) · [Sumas de verificación](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.0/SHA256SUMS)
+
 ## Cómo funciona
 
 La explicación sigue el idioma de la conversación. Los términos técnicos seleccionados aparecen en inglés, con una definición breve en el idioma de la respuesta la primera vez. Ejemplo de formato esperado: `Cache (caché)`. En las menciones posteriores de la misma respuesta se usa `Cache`; en una nueva respuesta se vuelve a incluir la definición.

@@ -6,6 +6,10 @@
 
 이전 식별자 `technical-terms-en-zh` 또는 `dsh-plugin-technical-terms-en-zh`를 사용한다면 기존 플러그인을 비활성화한 뒤 `technical-english-companion` 또는 `dsh-plugin-technical-english-companion`을 활성화하세요. 한 개만 활성화하세요. 일상 환경을 유지하면서 아래 절차를 별도 환경에서 사용할 수 있습니다.
 
+## 다운로드
+
+[v3.0.0 배포 페이지](https://github.com/Calliope-Nicles/technical-english-companion/releases/tag/v3.0.0) · [Codex용 ZIP](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.0/technical-english-companion-3.0.0.zip) · [DSH용 TGZ](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.0/dsh-plugin-technical-english-companion-3.0.0.tgz) · [검증용 해시 목록](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.0/SHA256SUMS)
+
 ## 동작 방식
 
 설명은 대화의 언어를 따릅니다. 선택된 전문 용어는 영어로 표기하고, 각 답변에서 처음 나올 때 해당 답변의 언어로 짧은 뜻을 덧붙입니다. 예상 표기 예시는 `Cache(캐시)`입니다. 같은 답변에서 다시 언급할 때는 `Cache`로 통일하고, 다음 답변에서는 처음 나올 때 뜻을 다시 덧붙입니다.

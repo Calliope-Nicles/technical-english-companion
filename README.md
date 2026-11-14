@@ -1,8 +1,14 @@
 <img src="assets/pitaya-icon.png" alt="像素小火龙果图标" width="80" height="80">
 
-[Español](docs/guide-es.md) · [日本語](docs/guide-ja.md) · [한국어](docs/guide-ko.md)
+**Technical English Companion**
 
-# 专业英语术语伴学 · Mac v3.0.0 发行说明
+[中文](#中文) · [Español](#español) · [日本語](#日本語) · [한국어](#한국어)
+
+# 中文
+
+**专业英语术语伴学 · Mac v3.0.0 发行说明**
+
+[下载 v3.0.0](https://github.com/Calliope-Nicles/technical-english-companion/releases/tag/v3.0.0)
 
 **Technical English Companion** 帮助学生和编程初学者边做项目，边学习专业英语。本版新增西班牙语、日语和韩语，保留中文支持。
 
@@ -100,11 +106,17 @@ Codex 可在插件页停用或卸载；DSH 桌面的插件总开关会同时停�
 
 ---
 
-# Technical English Companion · Guía en español
+# Español
+
+**[Technical English Companion · Guía en español](docs/guide-es.md)**
 
 Esta extensión ayuda a aprender vocabulario de desarrollo de software mientras usas Codex o DeepSeek Harness (DSH). La versión `3.0.0` está dirigida a usuarios de chino, español, japonés y coreano en macOS. En DSH, el alcance verificado es la versión `0.2.2-rc.1`, la entrada dedicada y Flash con nivel High.
 
 Si vienes del identificador anterior `technical-terms-en-zh` o `dsh-plugin-technical-terms-en-zh`, desactívalo antes de activar `technical-english-companion` o `dsh-plugin-technical-english-companion`. Mantén una sola copia habilitada. Puedes conservar tu instalación habitual y seguir el procedimiento siguiente en un entorno independiente.
+
+## Descargas
+
+[Versión v3.0.0](https://github.com/Calliope-Nicles/technical-english-companion/releases/tag/v3.0.0) · [Paquete para Codex (.zip)](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.0/technical-english-companion-3.0.0.zip) · [Paquete para DSH (.tgz)](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.0/dsh-plugin-technical-english-companion-3.0.0.tgz) · [Sumas de verificación](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.0/SHA256SUMS)
 
 ## Cómo funciona
 
@@ -208,11 +220,17 @@ El complemento utiliza el modelo y la cuenta que ya tengas configurados. No crea
 
 ---
 
-# Technical English Companion 日本語ガイド
+# 日本語
+
+**[Technical English Companion 日本語ガイド](docs/guide-ja.md)**
 
 このプラグインは、Codex または DeepSeek Harness（DSH）で作業を進めながら、ソフトウェア開発の専門英語に慣れるためのものです。バージョン `3.0.0` は、macOS 上で中国語、スペイン語、日本語、韓国語を使うユーザーを対象としています。DSH の検証範囲は `0.2.2-rc.1` の専用入口と Flash／High です。
 
 旧識別子 `technical-terms-en-zh` または `dsh-plugin-technical-terms-en-zh` を使用している場合は、旧版を無効にしてから `technical-english-companion` または `dsh-plugin-technical-english-companion` を有効にします。一つだけを有効にしてください。日常の環境を保ったまま、以下の手順を独立した環境で利用できます。
+
+## ダウンロード
+
+[v3.0.0 公開ページ](https://github.com/Calliope-Nicles/technical-english-companion/releases/tag/v3.0.0) · [Codex 用 ZIP](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.0/technical-english-companion-3.0.0.zip) · [DSH 用 TGZ](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.0/dsh-plugin-technical-english-companion-3.0.0.tgz) · [検証用ハッシュ一覧](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.0/SHA256SUMS)
 
 ## 動作
 
@@ -316,11 +334,17 @@ Codex ではプラグイン管理画面から無効化またはアンインス�
 
 ---
 
-# Technical English Companion 한국어 안내서
+# 한국어
+
+**[Technical English Companion 한국어 안내서](docs/guide-ko.md)**
 
 이 플러그인은 Codex 또는 DeepSeek Harness(DSH)로 작업하면서 소프트웨어 개발 분야의 전문 영어를 익히도록 돕습니다. 버전 `3.0.0`은 macOS에서 중국어, 스페인어, 일본어, 한국어를 사용하는 사용자를 대상으로 합니다. DSH 검증 범위는 `0.2.2-rc.1`의 전용 진입점과 Flash／High입니다.
 
 이전 식별자 `technical-terms-en-zh` 또는 `dsh-plugin-technical-terms-en-zh`를 사용한다면 기존 플러그인을 비활성화한 뒤 `technical-english-companion` 또는 `dsh-plugin-technical-english-companion`을 활성화하세요. 한 개만 활성화하세요. 일상 환경을 유지하면서 아래 절차를 별도 환경에서 사용할 수 있습니다.
+
+## 다운로드
+
+[v3.0.0 배포 페이지](https://github.com/Calliope-Nicles/technical-english-companion/releases/tag/v3.0.0) · [Codex용 ZIP](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.0/technical-english-companion-3.0.0.zip) · [DSH용 TGZ](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.0/dsh-plugin-technical-english-companion-3.0.0.tgz) · [검증용 해시 목록](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.0/SHA256SUMS)
 
 ## 동작 방식
 

@@ -6,6 +6,10 @@
 
 旧識別子 `technical-terms-en-zh` または `dsh-plugin-technical-terms-en-zh` を使用している場合は、旧版を無効にしてから `technical-english-companion` または `dsh-plugin-technical-english-companion` を有効にします。一つだけを有効にしてください。日常の環境を保ったまま、以下の手順を独立した環境で利用できます。
 
+## ダウンロード
+
+[v3.0.0 公開ページ](https://github.com/Calliope-Nicles/technical-english-companion/releases/tag/v3.0.0) · [Codex 用 ZIP](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.0/technical-english-companion-3.0.0.zip) · [DSH 用 TGZ](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.0/dsh-plugin-technical-english-companion-3.0.0.tgz) · [検証用ハッシュ一覧](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.0/SHA256SUMS)
+
 ## 動作
 
 説明文は会話の言語に合わせます。選ばれた専門用語は英語で表記し、各回答の最初の登場時に、その回答の言語による短い意味を添えます。表記の例は `Cache（キャッシュ）` です。同じ回答内で再び登場するときは `Cache` を使い、次の回答では最初に意味を添え直します。
