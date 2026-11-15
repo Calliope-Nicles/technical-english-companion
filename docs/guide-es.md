@@ -2,13 +2,13 @@
 
 [中文](../README.md) · [日本語](guide-ja.md) · [한국어](guide-ko.md)
 
-Esta extensión ayuda a aprender vocabulario de desarrollo de software mientras usas Codex o DeepSeek Harness (DSH). La versión `3.0.0` está dirigida a usuarios de chino, español, japonés y coreano en macOS. En DSH, el alcance verificado es la versión `0.2.2-rc.1`, la entrada dedicada y Flash con nivel High.
+Esta extensión ayuda a aprender vocabulario de desarrollo de software mientras usas Codex o DeepSeek Harness (DSH). La versión `3.0.1` está dirigida a usuarios de chino, español, japonés y coreano en macOS. Admite DSH `0.2.2-rc.1` y `0.2.2-rc.3`. En `0.2.2-rc.3`, una pregunta real en chino con la entrada predeterminada y Flash / High pasó la comprobación de términos; las pruebas anteriores de los cuatro idiomas corresponden a `0.2.2-rc.1` y a la entrada dedicada.
 
 Si vienes del identificador anterior `technical-terms-en-zh` o `dsh-plugin-technical-terms-en-zh`, desactívalo antes de activar `technical-english-companion` o `dsh-plugin-technical-english-companion`. Mantén una sola copia habilitada. Puedes conservar tu instalación habitual y seguir el procedimiento siguiente en un entorno independiente.
 
 ## Descargas
 
-[Versión v3.0.0](https://github.com/Calliope-Nicles/technical-english-companion/releases/tag/v3.0.0) · [Paquete para Codex (.zip)](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.0/technical-english-companion-3.0.0.zip) · [Paquete para DSH (.tgz)](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.0/dsh-plugin-technical-english-companion-3.0.0.tgz) · [Sumas de verificación](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.0/SHA256SUMS)
+[Versión v3.0.1](https://github.com/Calliope-Nicles/technical-english-companion/releases/tag/v3.0.1) · [Paquete para Codex (.zip)](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.1/technical-english-companion-3.0.1.zip) · [Paquete para DSH (.tgz)](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.1/dsh-plugin-technical-english-companion-3.0.1.tgz) · [Sumas de verificación](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.1/SHA256SUMS)
 
 ## Cómo funciona
 
@@ -18,9 +18,9 @@ Puedes indicar otro idioma o pedir que no se añadan términos en inglés. Una p
 
 ## Instalar en Codex para Mac
 
-1. Obtén y descomprime el ZIP común `technical-english-companion-3.0.0.zip`. El archivo `.tgz` está destinado únicamente a DSH.
+1. Obtén y descomprime el ZIP común `technical-english-companion-3.0.1.zip`. El archivo `.tgz` está destinado únicamente a DSH.
 2. En el apartado de complementos de Codex, añade un mercado de complementos usando la ruta absoluta de la carpeta descomprimida. Debe contener `.codex-plugin/plugin.json` y `.agents/plugins/marketplace.json`.
-3. Busca el origen `Technical English Companion` e instala `technical-english-companion`. Comprueba la versión `3.0.0` y que esté habilitado. Mantén habilitado un solo origen de este complemento.
+3. Busca el origen `Technical English Companion` e instala `technical-english-companion`. Comprueba la versión `3.0.1` y que esté habilitado. Mantén habilitado un solo origen de este complemento.
 4. En la configuración de hooks, revisa `SessionStart`. El comando debe usar `/bin/cat` para leer `src/terminology.md` dentro de la carpeta instalada. Revisa el contenido y confía en el hook antes de usarlo.
 5. Abre una conversación nueva para comprobar el resultado.
 
@@ -28,19 +28,21 @@ Documentación oficial de Codex: [empaquetado e instalación local](https://deve
 
 ## Instalar en DSH para Mac
 
-Esta versión se ha probado con DSH `0.2.2-rc.1` en macOS. Las instalaciones por enlace a una carpeta no pueden resolver la interfaz del programa anfitrión; usa el archivo `.tgz` sin descomprimirlo.
+Esta versión admite DSH `0.2.2-rc.1` y `0.2.2-rc.3` en macOS. La prueba real de `0.2.2-rc.3` se limita a una respuesta en chino con Flash / High y no equivale a una prueba completa de los cuatro idiomas. Usa el archivo `.tgz` sin descomprimirlo; la instalación por enlace a una carpeta puede no resolver la interfaz del anfitrión.
 
-1. Guarda `dsh-plugin-technical-english-companion-3.0.0.tgz` sin descomprimir.
+1. Guarda `dsh-plugin-technical-english-companion-3.0.1.tgz` sin descomprimir.
 2. En Terminal, sustituye la ruta de `DSH_HOME` por una carpeta de prueba independiente y la ruta del archivo por la de tu descarga.
 
 ```sh
 export DSH_HOME="/absolute/path/to/isolated-dsh"
 companion_dsh="/Applications/DeepSeek Harness.app/Contents/Resources/runtime/cli/bin/dsh"
-"$companion_dsh" plugin --profile headless add "/absolute/path/to/dsh-plugin-technical-english-companion-3.0.0.tgz" --offline --ignore-scripts
+"$companion_dsh" plugin --profile headless add "/absolute/path/to/dsh-plugin-technical-english-companion-3.0.1.tgz" --offline --ignore-scripts
 "$companion_dsh" plugin --profile headless list --depth 0
 ```
 
-3. Comprueba que la lista incluya `dsh-plugin-technical-english-companion` y la versión `3.0.0`. Instalar el paquete no activa por sí solo la entrada dedicada.
+3. Comprueba que la lista incluya `dsh-plugin-technical-english-companion` y la versión `3.0.1`. Instalar el paquete no activa por sí solo la entrada dedicada.
+
+Para usar la entrada predeterminada, conserva el modelo que ya tengas configurado, comprueba que el componente `technical-english-companion` esté en ejecución y abre una conversación nueva. La prueba de esta entrada usó Flash / High; no exige crear una conexión dedicada. Los pasos 4–7 siguientes solo se necesitan para la entrada dedicada.
 4. Necesitas una conexión existente compatible con Responses API (interfaz de solicitudes y respuestas estructuradas) y una Credential reference (nombre de una credencial ya guardada por DSH). El inicio de sesión de la aplicación no garantiza estos requisitos. Sin una conexión y una referencia compatibles, esta entrada no puede utilizarse; no necesitas abrir otra cuenta.
 5. Crea `$DSH_HOME/companion-test.yml` con el contenido siguiente. Sustituye la ruta por la de tu almacén existente, la dirección por la de tu servicio compatible y `EXISTING_CREDENTIAL_REFERENCE` por el nombre existente. `apiKeyEnv` recibe ese nombre, nunca la clave secreta. No copies el contenido del almacén.
 

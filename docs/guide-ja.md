@@ -2,13 +2,13 @@
 
 [中文](../README.md) · [Español](guide-es.md) · [한국어](guide-ko.md)
 
-このプラグインは、Codex または DeepSeek Harness（DSH）で作業を進めながら、ソフトウェア開発の専門英語に慣れるためのものです。バージョン `3.0.0` は、macOS 上で中国語、スペイン語、日本語、韓国語を使うユーザーを対象としています。DSH の検証範囲は `0.2.2-rc.1` の専用入口と Flash／High です。
+このプラグインは、Codex または DeepSeek Harness（DSH）で作業を進めながら、ソフトウェア開発の専門英語に慣れるためのものです。バージョン `3.0.1` は macOS 上の中国語、スペイン語、日本語、韓国語を対象とし、DSH `0.2.2-rc.1` と `0.2.2-rc.3` に対応します。`0.2.2-rc.3` の既定の入口と Flash／High では、中国語の実際の質問 1 件で用語表記を確認しました。既存の四言語の結果は `0.2.2-rc.1` の専用入口に対応します。
 
 旧識別子 `technical-terms-en-zh` または `dsh-plugin-technical-terms-en-zh` を使用している場合は、旧版を無効にしてから `technical-english-companion` または `dsh-plugin-technical-english-companion` を有効にします。一つだけを有効にしてください。日常の環境を保ったまま、以下の手順を独立した環境で利用できます。
 
 ## ダウンロード
 
-[v3.0.0 公開ページ](https://github.com/Calliope-Nicles/technical-english-companion/releases/tag/v3.0.0) · [Codex 用 ZIP](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.0/technical-english-companion-3.0.0.zip) · [DSH 用 TGZ](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.0/dsh-plugin-technical-english-companion-3.0.0.tgz) · [検証用ハッシュ一覧](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.0/SHA256SUMS)
+[v3.0.1 公開ページ](https://github.com/Calliope-Nicles/technical-english-companion/releases/tag/v3.0.1) · [Codex 用 ZIP](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.1/technical-english-companion-3.0.1.zip) · [DSH 用 TGZ](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.1/dsh-plugin-technical-english-companion-3.0.1.tgz) · [検証用ハッシュ一覧](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.1/SHA256SUMS)
 
 ## 動作
 
@@ -18,9 +18,9 @@
 
 ## Mac 版 Codex へのインストール
 
-1. 共通 ZIP `technical-english-companion-3.0.0.zip` を入手して展開します。`.tgz` は DSH 専用です。
+1. 共通 ZIP `technical-english-companion-3.0.1.zip` を入手して展開します。`.tgz` は DSH 専用です。
 2. Codex のプラグイン画面から、展開したフォルダーの絶対パスを使ってプラグインマーケットを追加します。そのフォルダーには `.codex-plugin/plugin.json` と `.agents/plugins/marketplace.json` が必要です。
-3. 配布元 `Technical English Companion` から `technical-english-companion` をインストールし、バージョンが `3.0.0` で有効になっていることを確認します。このプラグインは一つの配布元だけを有効にします。
+3. 配布元 `Technical English Companion` から `technical-english-companion` をインストールし、バージョンが `3.0.1` で有効になっていることを確認します。このプラグインは一つの配布元だけを有効にします。
 4. フック設定で `SessionStart` を確認します。コマンドが `/bin/cat` を使い、インストール先の `src/terminology.md` を読むことを確認し、内容を確認したうえでフックを信頼します。
 5. 新しい会話を開いて動作を確認します。
 
@@ -28,19 +28,21 @@ Codex 公式ドキュメント：[パッケージとローカル配布](https://
 
 ## Mac 版 DSH へのインストール
 
-この版の検証環境は macOS の DSH `0.2.2-rc.1` です。フォルダーへのリンクではホストのインターフェースを解決できないため、`.tgz` を展開せずに使います。
+この版は macOS の DSH `0.2.2-rc.1` と `0.2.2-rc.3` に対応します。`0.2.2-rc.3` の実モデル検証は Flash／High の中国語回答 1 件に限られ、四言語すべての検証ではありません。ホストのインターフェースを解決できない場合があるフォルダーリンクは使わず、`.tgz` を展開せずに使います。
 
-1. `dsh-plugin-technical-english-companion-3.0.0.tgz` を展開せずに保存します。
+1. `dsh-plugin-technical-english-companion-3.0.1.tgz` を展開せずに保存します。
 2. ターミナルで、`DSH_HOME` の値を独立したテスト用フォルダーに、アーカイブのパスを実際の保存先に置き換えて実行します。
 
 ```sh
 export DSH_HOME="/absolute/path/to/isolated-dsh"
 companion_dsh="/Applications/DeepSeek Harness.app/Contents/Resources/runtime/cli/bin/dsh"
-"$companion_dsh" plugin --profile headless add "/absolute/path/to/dsh-plugin-technical-english-companion-3.0.0.tgz" --offline --ignore-scripts
+"$companion_dsh" plugin --profile headless add "/absolute/path/to/dsh-plugin-technical-english-companion-3.0.1.tgz" --offline --ignore-scripts
 "$companion_dsh" plugin --profile headless list --depth 0
 ```
 
-3. 一覧に `dsh-plugin-technical-english-companion` とバージョン `3.0.0` があることを確認します。インストールだけでは、専用入口は有効になりません。
+3. 一覧に `dsh-plugin-technical-english-companion` とバージョン `3.0.1` があることを確認します。インストールだけでは、専用入口は有効になりません。
+
+既定の入口を使う場合は、設定済みのモデルを保ち、`technical-english-companion` が実行中であることを確認して新しい会話を開きます。この入口の実測は Flash／High を使い、専用の接続設定は不要です。以下の手順 4〜7 は専用入口を使う場合だけ必要です。
 4. 既存の Responses API（構造化した要求と回答を扱うインターフェース）接続と、Credential reference（DSH に保存済みの認証情報を指す名前）が必要です。アプリへのログインだけでは、この条件を満たすとは限りません。対応する接続と名前がなければ、この入口は利用できません。追加アカウントの作成は不要です。
 5. 次の内容で `$DSH_HOME/companion-test.yml` を作成します。保存先を既存の認証情報ファイルのパスに、接続先を対応するサービスのアドレスに、`EXISTING_CREDENTIAL_REFERENCE` を既存の名前に置き換えます。`apiKeyEnv` に指定するのは名前であり、秘密のキー自体ではありません。認証情報ファイルの内容はコピーしません。
 

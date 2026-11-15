@@ -2,13 +2,13 @@
 
 [中文](../README.md) · [Español](guide-es.md) · [日本語](guide-ja.md)
 
-이 플러그인은 Codex 또는 DeepSeek Harness(DSH)로 작업하면서 소프트웨어 개발 분야의 전문 영어를 익히도록 돕습니다. 버전 `3.0.0`은 macOS에서 중국어, 스페인어, 일본어, 한국어를 사용하는 사용자를 대상으로 합니다. DSH 검증 범위는 `0.2.2-rc.1`의 전용 진입점과 Flash／High입니다.
+이 플러그인은 Codex 또는 DeepSeek Harness(DSH)로 작업하면서 소프트웨어 개발 분야의 전문 영어를 익히도록 돕습니다. 버전 `3.0.1`은 macOS의 중국어, 스페인어, 일본어, 한국어 사용자를 대상으로 하며 DSH `0.2.2-rc.1`과 `0.2.2-rc.3`을 지원합니다. `0.2.2-rc.3`의 기본 진입점과 Flash／High에서는 실제 중국어 질문 1건의 용어 표기를 확인했습니다. 기존 네 언어 결과는 `0.2.2-rc.1`의 전용 진입점에 해당합니다.
 
 이전 식별자 `technical-terms-en-zh` 또는 `dsh-plugin-technical-terms-en-zh`를 사용한다면 기존 플러그인을 비활성화한 뒤 `technical-english-companion` 또는 `dsh-plugin-technical-english-companion`을 활성화하세요. 한 개만 활성화하세요. 일상 환경을 유지하면서 아래 절차를 별도 환경에서 사용할 수 있습니다.
 
 ## 다운로드
 
-[v3.0.0 배포 페이지](https://github.com/Calliope-Nicles/technical-english-companion/releases/tag/v3.0.0) · [Codex용 ZIP](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.0/technical-english-companion-3.0.0.zip) · [DSH용 TGZ](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.0/dsh-plugin-technical-english-companion-3.0.0.tgz) · [검증용 해시 목록](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.0/SHA256SUMS)
+[v3.0.1 배포 페이지](https://github.com/Calliope-Nicles/technical-english-companion/releases/tag/v3.0.1) · [Codex용 ZIP](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.1/technical-english-companion-3.0.1.zip) · [DSH용 TGZ](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.1/dsh-plugin-technical-english-companion-3.0.1.tgz) · [검증용 해시 목록](https://github.com/Calliope-Nicles/technical-english-companion/releases/download/v3.0.1/SHA256SUMS)
 
 ## 동작 방식
 
@@ -18,9 +18,9 @@
 
 ## Mac용 Codex에 설치
 
-1. 공통 ZIP 파일 `technical-english-companion-3.0.0.zip`을 받아 압축을 풉니다. `.tgz` 파일은 DSH 전용입니다.
+1. 공통 ZIP 파일 `technical-english-companion-3.0.1.zip`을 받아 압축을 풉니다. `.tgz` 파일은 DSH 전용입니다.
 2. Codex의 플러그인 화면에서 압축을 푼 폴더의 절대 경로로 플러그인 마켓을 추가합니다. 폴더 안에는 `.codex-plugin/plugin.json`과 `.agents/plugins/marketplace.json`이 있어야 합니다.
-3. `Technical English Companion` 배포처에서 `technical-english-companion`을 설치합니다. 버전이 `3.0.0`이고 활성화되어 있는지 확인합니다. 이 플러그인은 한 배포처만 활성화합니다.
+3. `Technical English Companion` 배포처에서 `technical-english-companion`을 설치합니다. 버전이 `3.0.1`이고 활성화되어 있는지 확인합니다. 이 플러그인은 한 배포처만 활성화합니다.
 4. 훅 설정에서 `SessionStart`를 검토합니다. 명령이 `/bin/cat`으로 설치 폴더 안의 `src/terminology.md`를 읽는지 확인하고, 내용을 검토한 후 훅을 신뢰하도록 설정합니다.
 5. 새 대화를 열어 확인합니다.
 
@@ -28,19 +28,21 @@ Codex 공식 문서: [패키지 및 로컬 배포](https://developers.openai.com
 
 ## Mac용 DSH에 설치
 
-이 버전의 검증 환경은 macOS용 DSH `0.2.2-rc.1`입니다. 폴더 링크로 설치하면 호스트 인터페이스를 찾지 못하므로 `.tgz`의 압축을 풀지 않고 사용합니다.
+이 버전은 macOS용 DSH `0.2.2-rc.1`과 `0.2.2-rc.3`을 지원합니다. `0.2.2-rc.3`의 실제 모델 검증은 Flash／High의 중국어 답변 1건이며 네 언어 전체 검증은 아닙니다. 폴더 링크는 호스트 인터페이스를 찾지 못할 수 있으므로 `.tgz`의 압축을 풀지 않고 사용하세요.
 
-1. `dsh-plugin-technical-english-companion-3.0.0.tgz`를 받아 압축을 풀지 않고 저장합니다.
+1. `dsh-plugin-technical-english-companion-3.0.1.tgz`를 받아 압축을 풀지 않고 저장합니다.
 2. 터미널에서 `DSH_HOME` 값을 별도의 테스트 폴더로 바꾸고, 아카이브 경로를 실제 파일 경로로 바꾼 뒤 실행합니다.
 
 ```sh
 export DSH_HOME="/absolute/path/to/isolated-dsh"
 companion_dsh="/Applications/DeepSeek Harness.app/Contents/Resources/runtime/cli/bin/dsh"
-"$companion_dsh" plugin --profile headless add "/absolute/path/to/dsh-plugin-technical-english-companion-3.0.0.tgz" --offline --ignore-scripts
+"$companion_dsh" plugin --profile headless add "/absolute/path/to/dsh-plugin-technical-english-companion-3.0.1.tgz" --offline --ignore-scripts
 "$companion_dsh" plugin --profile headless list --depth 0
 ```
 
-3. 목록의 패키지 이름이 `dsh-plugin-technical-english-companion`인지, 버전 표시가 `3.0.0`인지 확인합니다. 설치만으로는 전용 진입점이 활성화되지 않습니다.
+3. 목록의 패키지 이름이 `dsh-plugin-technical-english-companion`인지, 버전 표시가 `3.0.1`인지 확인합니다. 설치만으로는 전용 진입점이 활성화되지 않습니다.
+
+기본 진입점을 쓰려면 기존 모델 설정을 유지하고 `technical-english-companion` 구성 요소가 실행 중인지 확인한 뒤 새 대화를 여세요. 이 진입점의 실제 검증은 Flash／High로 진행했으며 별도 전용 연결 설정은 필요하지 않습니다. 아래 4–7단계는 전용 진입점을 사용할 때만 필요합니다.
 4. 기존 Responses API(구조화된 요청과 답변을 처리하는 인터페이스) 연결과 Credential reference(DSH에 이미 저장된 인증 정보를 가리키는 이름)가 필요합니다. 앱 로그인만으로 이 조건이 충족되지는 않습니다. 호환되는 연결과 이름이 없다면 이 진입점을 사용할 수 없습니다. 새 계정은 필요하지 않습니다.
 5. 아래 내용으로 `$DSH_HOME/companion-test.yml`을 만듭니다. 경로는 기존 인증 정보 파일의 경로로, 주소는 호환 서비스의 주소로, `EXISTING_CREDENTIAL_REFERENCE`는 기존 이름으로 바꿉니다. `apiKeyEnv`에는 비밀 키 자체가 아닌 이름을 넣습니다. 인증 정보 파일의 내용을 복사하지 마세요.
 

@@ -1,6 +1,6 @@
 {
   "name": "technical-english-companion",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "专业英语术语伴学 / Learn software development terms in English while working in Chinese, Spanish, Japanese, or Korean.",
   "hooks": "./hooks/hooks.json",
   "interface": {
